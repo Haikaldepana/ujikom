@@ -5,11 +5,14 @@ use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\pelangganController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\produkController;
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/penjualan',[PenjualanController::class,'penjualan']);
 
 
 Route::get('/login',[PetugasController::class,'login'])->name('login');

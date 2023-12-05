@@ -14,7 +14,7 @@
             @csrf
         <div class="form">  
             <form class="register-form">
-                <h1>BUAT AKUN PETUGAS</h1>
+                <h1>Buat Akun Petugas</h1>
                 <input type="text" placeholder="username" name="username"/>
                 <input type="password" placeholder="password" name="password"/>
                 <input type="text" placeholder="full name" name ="fn"/>

@@ -14,7 +14,7 @@
     <div class="container">
         <div class="table-responsive">
             <table class="table table-bordered">
-                <thead class="table-success">
+                <thead class="table-primary">
                     <tr>
                         <th scope="col" colspan="5" style="text-align: center">
                             <h1>Data Produk</h1>
