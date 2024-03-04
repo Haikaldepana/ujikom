@@ -26,7 +26,7 @@
                 <label from="email" class="form-label">email</label> 
                 <input type="email" placeholder="" name="email"/>
                 <label from="password" class="form-label">password</label> 
-                <input type="password" name="password" class="form-control" id="password" required/>
+                <input type="password" name="password" class="form-label" id="password" required/>
                 <button>BUAT</button>
             
               </form>

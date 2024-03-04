@@ -33,7 +33,7 @@ Route::get('/', function () {
     Route::get('/register',[AuthController::class,'register'])->name('register');
     Route::post('/register',[AuthController::class,'registerPost'])->name('register');
 
-// Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/home', [dashboardController::class,'home']);
     Route::get('/logout',[PetugasController::class,'logout']);
     Route::get('data-produk',[produkController::class,'data_p']);
@@ -58,4 +58,4 @@ Route::get('/', function () {
     Route::get('/detail-penjualan/{id}',[PenjualanController::class,'detail']);
     Route::post('Checkout',[PenjualanController::class,'checkout']);
     
-// });
+});
