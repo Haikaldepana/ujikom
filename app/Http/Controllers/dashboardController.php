@@ -9,4 +9,5 @@ class dashboardController extends Controller
     function home (){
         return view ('/home');
     }
+
 }

@@ -10,12 +10,20 @@ use Illuminate\Support\Facades\Session;
 class produkController extends Controller
 {
     function data_p(){
-        $produk = DB::table('produk')->get();
+        // return "k";
+        $produk = DB::table('produk')->where("status","!=","dihapus")->get();
         return view('/data-produk',['produk'=>$produk]);    
     }
 
+    function stok(){
+        $produk = DB::table('produk')->get();
+        return view('/stok',['produk'=>$produk]);    
+    }
+
     function hapus($id){
-        DB::table('produk')->where('ProdukID','=',$id)->delete();
+        DB::table('produk')->where('ProdukID','=',$id)->update([
+            'status' =>"dihapus",   
+      ]  );
         return redirect()->back();
     }
 
@@ -26,13 +34,15 @@ class produkController extends Controller
     }
 
     function proses_update( request $request){
+        $produk = DB::table('produk')->where('NamaProduk', $request->np)->first();
+
         $harga = $request->harga;
         $nama_produk = $request->np;
-        $stok = $request->stok;
+    
         $pengaduan = DB::table('produk')->where('ProdukID',$request->id)->update([
-            'NamaProduk' => $nama_produk,
+            'NamaProduk' => $nama_produk,   
             'Harga' => $harga,
-            'Stok' => $stok
+            'Stok' => $request->stok
 
         ]);
         return redirect('/data-produk');

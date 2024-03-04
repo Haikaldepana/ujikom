@@ -17,7 +17,7 @@ class admincontroller extends Controller
 
 
     function tbuat(){
-        return view("tambah_admin");
+        return view("tambah-admin");
     }
     function buat_akun(request $request){
         $nama = $request->username;

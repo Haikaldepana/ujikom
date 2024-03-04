@@ -14,7 +14,7 @@
             @csrf
         <div class="form">
             <form class="register-form">
-                <h1>Buat Akun Admin</h1>
+               <center><h1>BUAT AKUN ADMIN</h1></center> 
                 <input type="text" placeholder="username" name="username"/>
                 <input type="password" placeholder="password" name="password"/>
                 <input type="text" placeholder="full name" name ="fn"/>

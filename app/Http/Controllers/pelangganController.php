@@ -32,7 +32,7 @@ class pelangganController extends Controller
         $produk = DB::table('pelanggan')->where('pelangganID',$request->id)->update([
             'NamaPelanggan' => $nama,
             'Alamat' => $alamat,
-            'NomorTelepon' => $no_telp
+            'NomorTelpon' => $no_telp
 
         ]);
         return redirect('/data-pelanggan');
@@ -52,7 +52,7 @@ class pelangganController extends Controller
         $pengaduan = DB::table('pelanggan')->insert([
             'NamaPelanggan' => $nama,
             'Alamat' => $alamat,
-            'NomorTelepon' => $no_telp
+            'NomorTelpon' => $no_telp
         ]);
 
         return redirect('/data-pelanggan');

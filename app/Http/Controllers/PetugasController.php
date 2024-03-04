@@ -14,7 +14,7 @@ class PetugasController extends Controller
     }
 
     function tbuat(){
-        return view("tambah_petugas");
+        return view("tambah-petugas");
     }
 
     function buat_akun(request $request){
@@ -22,7 +22,7 @@ class PetugasController extends Controller
         $user = $request->fn;
         $pass = $request->password;
 
-        $masyarakat = DB::table('petugas')->insert([
+        $users = DB::table('petugas')->insert([
             
             'username' => $nama,
             'password' => Hash::make($pass),//hash
