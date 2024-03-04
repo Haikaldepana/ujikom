@@ -57,7 +57,7 @@
             </ul>
           </li>
       </ul>
-      <a class="btn btn-outline-success" href="{{url('register')}}" role="button">terserah</a>
+      <a class="btn btn-outline-success" href="{{url('register')}}" role="button">Register</a>
       <a class="btn btn-outline-success" href="{{url('logout')}}" role="button">Logout</a>
       <a class="btn btn-outline-success" href="{{url('login')}}" role="button">Login</a>
     </div>
