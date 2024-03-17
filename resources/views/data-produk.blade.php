@@ -41,7 +41,7 @@
                             <td style="text-align: center">{{ $produk->Harga }}</td>
                             <td style="text-align: center">{{ $produk->Stok }}</td>
                             <td>
-                                <a href="hapus-produk/{{ $produk->ProdukID }}" type="submit"
+                                <a href="/hapus-produk/{{$produk->ProdukID}}" type="submit"
                                     class="btn btn-outline-danger" style="margin:2px">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">

@@ -16,13 +16,13 @@ class produkController extends Controller
     }
 
     function stok(){
-        $produk = DB::table('produk')->get();
+        $produk = DB::table('produk')->where('status', '=', 'tersedia')->get();
         return view('/stok',['produk'=>$produk]);    
     }
 
     function hapus($id){
         DB::table('produk')->where('ProdukID','=',$id)->update([
-            'status' =>"dihapus",   
+            'status' => "dihapus"   
       ]  );
         return redirect()->back();
     }

@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Session;
 class pelangganController extends Controller
 {
     function data_P(){
-        $pelanggan = DB::table('pelanggan')->get();
+        $pelanggan = DB::table('pelanggan')->where('status','!=', 'dihapus')->get();
         return view('/data-pelanggan',['pelanggan'=>$pelanggan]);    
     }
 
     function hapus($id){
-        DB::table('pelanggan')->where('pelangganID','=',$id)->delete();
+        DB::table('pelanggan')->where('pelangganID','=', $id)->update(['status'=> 'dihapus']);
         return redirect()->back();
     }
 
